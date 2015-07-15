@@ -1,16 +1,16 @@
-#! /usr/bin/nodejs
+#!/usr/bin/env node
 
 var readline = require('readline');
 var rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-  terminal: false
+	input: process.stdin,
+	output: process.stdout,
+	terminal: false
 });
 
 rl.on('line', function(line){
-    var splits = line.split(",");
-    var getPos = function(i) {
-        return splits[i] ? splits[i] : "";
-    }
-    process.stdout.write(getPos(1) + ";" + getPos(0) + ";" + getPos(12) + ";" + getPos(2) + '\n');
+	var splits = line.split(",");
+	var getPos = function(i) {
+		return splits[i] ? splits[i] : "";
+	}
+	process.stdout.write(getPos(1) + ";" + getPos(0) + ";" + getPos(12) + ";" + getPos(2) + '\n');
 });
